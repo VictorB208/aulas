@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#Esse script faz com que sejam listados os arquivos, caso seja digitado a letra "a", e caso seja digitado a letra "b", ele mostra os diretórios.
+#"while true", "do" e "done" matem o usuário num loop, o chamado laço, para que o script não pare de rodar, apenas quando é digitado ctral +c.
+
+while true;
+
+do
+        echo "Digite a para listar diretórios, ou b para listar arquivos"
+        read x
+
+        if [ "$x" == "a" ]; then
+                ls -d /*
+
+        elif [ "$x" == "b" ]; then
+                ls -p | grep -v /
+        fi
+done 
+
+
+#!/bin/bash
+
+while true;
+        do
+                read -p "Digita: " c
+                        case $c in
+                                "a") echo "a" ;;
+                                "b") echo "b" ;;
+                                "c") echo "c" ;;
+                                "q") echo saindo ;;
+                                *) echo errouu;;
+                esac
+        done
+
+
